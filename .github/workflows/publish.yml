@@ -18,8 +18,11 @@ jobs:
       - name: Install Deno
         run: |
           curl -fsSL https://deno.land/x/install/install.sh | sh
-          export DENO_INSTALL="/home/runner/.deno"
-          export PATH="$DENO_INSTALL/bin:$PATH"
+          echo "DENO_INSTALL=/home/runner/.deno" >> $GITHUB_ENV
+          echo "PATH=\$DENO_INSTALL/bin:\$PATH" >> $GITHUB_ENV
 
       - name: Publish package
+        env:
+          DENO_INSTALL: /home/runner/.deno
+          PATH: /home/runner/.deno/bin:$PATH
         run: deno publish
