@@ -15,5 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Deno
+        run: |
+          curl -fsSL https://deno.land/x/install/install.sh | sh
+          export DENO_INSTALL="/home/runner/.deno"
+          export PATH="$DENO_INSTALL/bin:$PATH"
+
       - name: Publish package
         run: deno publish
