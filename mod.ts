@@ -1,6 +1,5 @@
 /**
- * @class Ap
- * @classdesc This class creates a fixed position div in the browser to display messages or logs. 
+ * This class creates a fixed position div in the browser to display messages or logs. 
  * If not in a browser environment, it logs messages to the console.
  * 
  * 该类在浏览器中创建一个固定位置的 div 来显示消息或日志。如果不在浏览器环境中，它会将消息记录到控制台。
@@ -11,6 +10,13 @@
  * ap.push("This is a test message.");
  */
 export default class Ap {
+  /**
+   * Pushes data to the div as a new paragraph or logs it to the console.
+   * 
+   * 将数据作为新段落推送到 div 或记录到控制台。
+   * 
+   * @param {any} data - The data to be displayed or logged. 要显示或记录的数据。
+   */
   push: (data: any) => void;
   /**
    * Creates an instance of Ap.
@@ -40,13 +46,6 @@ export default class Ap {
         div.style.width = "100%";
         div.style.maxHeight = "25%";
         document.body.appendChild(div);
-        /**
-         * Pushes data to the div as a new paragraph.
-         * 
-         * 将数据作为新段落推送到 div。
-         * 
-         * @param {any} data - The data to be displayed. 要显示的数据。
-         */
         this.push = (data: any) => {
           const dataString = JSON.stringify(data);
           const p = document.createElement("p");
@@ -56,13 +55,6 @@ export default class Ap {
         break;
       }
       case false: {
-        /**
-         * Logs data to the console.
-         * 
-         * 将数据记录到控制台。
-         * 
-         * @param {any} data - The data to be logged. 要记录的数据。
-         */
         this.push = (data: any) => {
           console.log(`%c${JSON.stringify(data)}`, `background-color: ${bgColor}; color: ${color}; padding: 0.5rem; border-radius: 0.5rem;`);
         };
