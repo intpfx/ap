@@ -32,3 +32,19 @@ const ap = new Ap("blue", "yellow");
 ap.push({ message: "Hello, world!" });
 ap.push("This is a test message.");
 ```
+
+## Contributing 贡献
+If you would like to contribute to this project, please follow these steps:
+
+如果您想为此项目做出贡献，请按照以下步骤操作：
+
+1. Fork the repository 分叉仓库
+2. Create a new branch 创建一个新分支
+3. Make your changes and commit them 进行更改并提交
+4. Push your changes to your fork 将更改推送到您的分叉
+5. Create a pull request 创建一个拉取请求
+
+## License 许可证
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+此项目使用 MIT 许可证。有关详细信息，请参阅 LICENSE 文件
