@@ -16,3 +16,19 @@ const ap = new Ap("blue", "yellow");
 ap.push({ message: "Hello, world!" });
 ap.push("This is a test message.");
 ```
+
+OR
+
+或者
+
+```bash
+npm install @intpfx/ap
+```
+
+```javascript
+import Ap from '@intpfx/ap';
+
+const ap = new Ap("blue", "yellow");
+ap.push({ message: "Hello, world!" });
+ap.push("This is a test message.");
+```
